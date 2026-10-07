@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="showDialog(event)">
+        <div>
+            <label for="student name">Name:</label>
+            <input type="text" id="student-name" placeholder="Enter Name" required>
+        </div>
+        <div>
+            <label for="student age">Age:</label>
+            <input type="number" id="student-age" placeholder="Enter Age" min="1">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="pAssword" minlength="8">
+        </div>
+        <div>
+            <label> Course</label>
+            <input type="radio" id="DAAIT" name="course">
+            <label for="DAAIT">DAAIT</label>
+
+            <input type="radio" id="BSIT" name="course" checked>
+            <label for="BSIT">BSIT</label>
+        </div>
+        <div>
+
+            <label> Skills</label>
+            <input type="checkbox" id="HTML" name="course">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="CSS" name="course" checked>
+            <label for="css">CSS</label>
+        </div>
+        <div>
+            <label="bio">Student Biography</label>
+            <textarea id="bio" name= "Biography" placeholder="Write your story"></textarea>
+        </div>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        function showDialog(event) {
+            const name = document.getElementById('student-name').value;
+            const age = document.getElementById('student-age').value;
+
+            alert(`Student Details Submitted: Name:${name}\n Age: ${age}`);
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
